@@ -1,0 +1,1119 @@
+:root {
+    --defBlue: #3ba3ed;
+    --defPurple: #4346f7;
+    --defAqua: #5ecdf2;
+    --defGrey: #635b5a;
+    --defLightGrey: #b3afaf;
+}
+
+@media screen and (max-width: 319px) {
+    /* Header */
+
+    header .header-holder #logo {
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Responsive Header */
+
+    .responsive-menu {
+        width: 200px;
+        margin-left: -100px;
+    }
+
+    .responsive-menu nav a:last-child {
+        font-size: 19px;
+    }
+    
+    /* Home */
+    
+    .home {
+        height: 100vh;
+        background: linear-gradient(45deg, var(--defBlue) 50%, white 50%);
+    }
+    
+    .home .home-holder {
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+        grid-row-gap: 70px;
+        justify-items: center;
+    }
+    
+    .home .home-holder .info {
+        width: 90vw;
+    }
+    
+    .home .home-holder .info h1 {
+        font-size: 30px;
+    }
+
+    .home .home-holder .info p {
+        font-size: 15px;
+        width: 70vw;
+        margin: 20px 0;
+    }
+
+    .home .home-holder img {
+        height: 200px;
+        margin-top: 50px;
+    }
+
+    .home .home-holder .info .button-holder button {
+        font-size: 20px;
+    }
+
+    /* Services */
+
+    .services {
+        background-position-x: 0;
+    }
+    
+    .services-title h2 {
+        font-size: 25px;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .services .main-p {
+        width: 70vw;
+        font-size: 15px;
+    }
+
+    .services .list .service {
+        display: flex;
+        height: 300px;
+        width: 250px;
+        background-position-x: -50px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .services .list .service strong {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .services .list .service p {
+        width: 200px;
+        text-align: center;
+    }
+
+    .services .list .service button {
+        font-size: 25px;
+    }
+
+    /* About */
+
+    .about .about-holder {
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+    }
+    
+    .about-title h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .about .about-holder .about-info {
+        display: block;
+        width: 90vw;
+        font-size: 15px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    
+    .about .about-holder .about-info p {
+        text-align: center;
+    }
+
+    .about .about-holder .about-info button {
+        font-size: 25px;
+        margin: 15px auto;
+    }
+
+    .about .about-holder .about-info .options .option p {
+        text-align: left;
+    }
+
+    .about .about-holder > img {
+        width: 100vw;
+    }
+    
+    /* Reviews */
+    
+    .reviews-title h2 {
+        font-size: 25px;
+        text-align: center;
+    }
+    
+    .reviews p {
+        width: 90vw;
+        font-size: 15px;
+    }
+
+    .reviews .reviews-holder {
+        flex-direction: column;
+    }
+
+    .reviews .reviews-holder .people .person {
+        width: 450px;
+        flex-direction: column;
+    }
+
+    .reviews .reviews-holder .people-info .info-holder {
+        width: 90vw;
+    }
+
+    .reviews .reviews-holder .people-info .info-profile {
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .reviews .reviews-holder .people-info .info-profile .info-text strong,
+    .reviews .reviews-holder .people-info .info-profile .info-text p {
+        text-align: center;
+    }
+    
+    /* Pricing */
+
+    .pricing-title h2 {
+        font-size: 25px;
+        text-align: center;
+    }
+    
+    .pricing p {
+        width: 90vw;
+        font-size: 15px;
+    }
+
+    .pricing .pricing-holder {
+        width: auto;
+        flex-direction: column;
+    }
+
+    .pricing .pricing-holder .plan {
+        width: 90vw;
+        margin-bottom: 30px;
+    }
+
+    .pricing .pricing-holder .plan:first-child,
+    .pricing .pricing-holder .plan:last-child {
+        height: 750px;
+    }
+
+    .pricing .pricing-holder .plan .plan-price {
+        color: black;
+        font-size: 30px;
+    }
+
+    .pricing .pricing-holder .plan .plan-info strong {
+        font-size: 20px;
+    }
+
+    .pricing .pricing-holder .plan .plan-info .plans p,
+    .pricing .pricing-holder .plan .plan-info .not-plans p,
+    .pricing .pricing-holder .plan .plan-info button {
+        font-size: 18px;
+    }
+
+    /* Footer */
+
+    footer {
+        background-position-x: -900px;
+    }
+    
+    footer h3 {
+        width: 90vw;
+        font-size: 30px;
+        margin-top: 400px;
+    }
+
+    footer form button {
+        display: block;
+        margin: 20px auto;
+    }
+
+    footer strong {
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    /* Header */
+
+    header .header-holder #logo {
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Responsive Header */
+
+    .responsive-menu {
+        width: 300px;
+        margin-left: -150px;
+    }
+    
+    /* Home */
+    
+    .home {
+        height: 100vh;
+        background: linear-gradient(45deg, var(--defBlue) 50%, white 50%);
+    }
+    
+    .home .home-holder {
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+        grid-row-gap: 70px;
+        justify-items: center;
+    }
+    
+    .home .home-holder .info {
+        width: 300px;
+    }
+    
+    .home .home-holder .info h1 {
+        font-size: 30px;
+    }
+
+    .home .home-holder .info p {
+        font-size: 15px;
+        width: 70vw;
+        margin: 20px 0;
+    }
+
+    .home .home-holder img {
+        height: 250px;
+    }
+
+    .home .home-holder .info .button-holder button {
+        font-size: 20px;
+    }
+
+    /* Services */
+
+    .services {
+        background-position-x: 0;
+    }
+    
+    .services-title h2 {
+        font-size: 25px;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .services .main-p {
+        width: 70vw;
+        font-size: 15px;
+    }
+
+    .services .list .service {
+        display: flex;
+        height: 300px;
+        width: 250px;
+        background-position-x: -50px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .services .list .service strong {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .services .list .service p {
+        width: 200px;
+        text-align: center;
+    }
+
+    .services .list .service button {
+        font-size: 25px;
+    }
+
+    /* About */
+
+    .about .about-holder {
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+    }
+    
+    .about-title h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .about .about-holder .about-info {
+        display: block;
+        width: 90vw;
+        font-size: 15px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    
+    .about .about-holder .about-info p {
+        text-align: center;
+    }
+
+    .about .about-holder .about-info button {
+        font-size: 25px;
+        margin: 15px auto;
+    }
+
+    .about .about-holder .about-info .options .option p {
+        text-align: left;
+    }
+
+    .about .about-holder > img {
+        width: 100vw;
+    }
+    
+    /* Reviews */
+    
+    .reviews-title h2 {
+        font-size: 25px;
+        text-align: center;
+    }
+    
+    .reviews p {
+        width: 90vw;
+        font-size: 15px;
+    }
+
+    .reviews .reviews-holder {
+        flex-direction: column;
+    }
+
+    .reviews .reviews-holder .people .person {
+        width: 450px;
+        flex-direction: column;
+    }
+
+    .reviews .reviews-holder .people-info .info-holder {
+        width: 90vw;
+    }
+
+    .reviews .reviews-holder .people-info .info-profile {
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .reviews .reviews-holder .people-info .info-profile .info-text strong,
+    .reviews .reviews-holder .people-info .info-profile .info-text p {
+        text-align: center;
+    }
+    
+    /* Pricing */
+
+    .pricing-title h2 {
+        font-size: 25px;
+        text-align: center;
+    }
+    
+    .pricing p {
+        width: 90vw;
+        font-size: 15px;
+    }
+
+    .pricing .pricing-holder {
+        width: auto;
+        flex-direction: column;
+    }
+
+    .pricing .pricing-holder .plan {
+        width: 90vw;
+        margin-bottom: 30px;
+    }
+
+    .pricing .pricing-holder .plan:first-child,
+    .pricing .pricing-holder .plan:last-child {
+        height: 750px;
+    }
+
+    .pricing .pricing-holder .plan .plan-price {
+        font-size: 35px;
+    }
+
+    .pricing .pricing-holder .plan .plan-info strong {
+        font-size: 30px;
+    }
+
+    .pricing .pricing-holder .plan .plan-info .plans p,
+    .pricing .pricing-holder .plan .plan-info .not-plans p,
+    .pricing .pricing-holder .plan .plan-info button {
+        font-size: 20px;
+    }
+
+    /* Footer */
+
+    footer {
+        background-position-x: -900px;
+    }
+    
+    footer h3 {
+        width: 90vw;
+        font-size: 30px;
+        margin-top: 400px;
+    }
+
+    footer form button {
+        display: block;
+        margin: 20px auto;
+    }
+
+    footer strong {
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    /* Header */
+
+    header .header-holder #logo {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    /* Home */
+    
+    .home {
+        height: 100vh;
+        background: linear-gradient(45deg, var(--defBlue) 50%, white 50%);
+    }
+    
+    .home .home-holder {
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+        grid-row-gap: 70px;
+        justify-items: center;
+    }
+    
+    .home .home-holder .info {
+        width: 400px;
+    }
+    
+    .home .home-holder .info h1 {
+        font-size: 40px;
+    }
+
+    .home .home-holder .info p {
+        font-size: 15px;
+        width: 40vw;
+        margin: 20px 0;
+    }
+
+    .home .home-holder img {
+        height: 300px;
+    }
+
+    .home .home-holder .info .button-holder button {
+        font-size: 20px;
+    }
+
+    /* Services */
+
+    .services {
+        background-position-x: 0;
+    }
+    
+    .services-title h2 {
+        font-size: 25px;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .services .main-p {
+        width: 60vw;
+        font-size: 15px;
+    }
+
+    .services .list .service {
+        display: flex;
+        height: 300px;
+        width: 250px;
+        background-position-x: -100px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .services .list .service strong {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .services .list .service p {
+        width: 200px;
+        text-align: center;
+    }
+
+    .services .list .service button {
+        font-size: 25px;
+    }
+
+    /* About */
+
+    .about .about-holder {
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+    }
+    
+    .about-title h2 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .about .about-holder .about-info {
+        font-size: 15px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    .about .about-holder .about-info p {
+        text-align: center;
+    }
+
+    .about .about-holder .about-info button {
+        font-size: 25px;
+        margin: 15px auto;
+    }
+    
+    /* Reviews */
+    
+    .reviews-title h2 {
+        font-size: 25px;
+        text-align: center;
+    }
+    
+    .reviews p {
+        width: 400px;
+        font-size: 15px;
+    }
+
+    .reviews .reviews-holder {
+        flex-direction: column;
+    }
+
+    .reviews .reviews-holder .people .person {
+        width: 450px;
+    }
+
+    .reviews .reviews-holder .people-info .info-holder {
+        width: 400px;
+    }
+    
+    /* Pricing */
+
+    .pricing-title h2 {
+        font-size: 25px;
+        text-align: center;
+    }
+    
+    .pricing p {
+        width: 400px;
+        font-size: 15px;
+    }
+
+    .pricing .pricing-holder {
+        width: auto;
+        flex-direction: column;
+    }
+
+    .pricing .pricing-holder .plan {
+        width: 450px;
+        margin-bottom: 30px;
+    }
+
+    .pricing .pricing-holder .plan:first-child,
+    .pricing .pricing-holder .plan:last-child {
+        height: 750px;
+    }
+
+    .pricing .pricing-holder .plan .plan-price {
+        font-size: 35px;
+    }
+
+    .pricing .pricing-holder .plan .plan-info strong {
+        font-size: 30px;
+    }
+
+    .pricing .pricing-holder .plan .plan-info .plans p,
+    .pricing .pricing-holder .plan .plan-info .not-plans p,
+    .pricing .pricing-holder .plan .plan-info button {
+        font-size: 20px;
+    }
+
+    /* Footer */
+
+    footer {
+        background-position-x: -700px;
+    }
+    
+    footer h3 {
+        font-size: 30px;
+        margin-top: 400px;
+    }
+
+    footer strong {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Header */
+
+    header .header-holder #logo {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    /* Home */
+    
+    .home {
+        height: 80vh;
+    }
+    
+    .home .home-holder .info {
+        width: 400px;
+    }
+    
+    .home .home-holder .info h1 {
+        font-size: 40px;
+    }
+
+    .home .home-holder .info p {
+        font-size: 15px;
+        width: 40vw;
+    }
+
+    .home .home-holder img {
+        height: 300px;
+    }
+
+    .home .home-holder .info .button-holder button {
+        font-size: 20px;
+    }
+
+    /* Services */
+
+    .services-title h2 {
+        font-size: 30px;
+    }
+
+    .services .main-p {
+        font-size: 15px;
+    }
+
+    .services .list .service {
+        height: 300px;
+        width: 200px;
+    }
+
+    .services .list .service p {
+        width: 170px;
+    }
+
+    /* About */
+
+    .about .about-holder {
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+    }
+    
+    .about-title h2 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .about .about-holder .about-info {
+        font-size: 15px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    .about .about-holder .about-info p {
+        text-align: center;
+    }
+
+    .about .about-holder .about-info button {
+        font-size: 25px;
+        margin: 15px auto;
+    }
+    
+    /* Reviews */
+    
+    .reviews-title h2 {
+        font-size: 25px;
+    }
+    
+    .reviews p {
+        width: 400px;
+        font-size: 15px;
+    }
+
+    .reviews .reviews-holder {
+        flex-direction: column;
+    }
+    
+    /* Pricing */
+
+    .pricing-title h2 {
+        font-size: 25px;
+    }
+    
+    .pricing p {
+        width: 400px;
+        font-size: 15px;
+    }
+
+    .pricing .pricing-holder {
+        width: auto;
+        flex-direction: column;
+    }
+
+    .pricing .pricing-holder .plan {
+        width: 500px;
+        margin-bottom: 30px;
+    }
+
+    .pricing .pricing-holder .plan:first-child,
+    .pricing .pricing-holder .plan:last-child {
+        height: 750px;
+    }
+
+    .pricing .pricing-holder .plan .plan-price {
+        font-size: 35px;
+    }
+
+    .pricing .pricing-holder .plan .plan-info strong {
+        font-size: 30px;
+    }
+
+    .pricing .pricing-holder .plan .plan-info .plans p,
+    .pricing .pricing-holder .plan .plan-info .not-plans p,
+    .pricing .pricing-holder .plan .plan-info button {
+        font-size: 20px;
+    }
+
+    /* Footer */
+
+    footer {
+        background-position-x: -300px;
+    }
+    
+    footer h3 {
+        font-size: 30px;
+        margin-top: 300px;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    /* Header */
+
+    header .header-holder #logo {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    /* Home */
+    
+    .home .home-holder .info h1 {
+        font-size: 40px;
+    }
+
+    .home .home-holder .info p {
+        font-size: 18px;
+        width: 40vw;
+    }
+
+    .home .home-holder img {
+        height: 300px;
+    }
+
+    /* Services */
+
+    .services-title h2 {
+        font-size: 30px;
+    }
+
+    .services .main-p {
+        font-size: 15px;
+    }
+
+    .services .list .service {
+        height: 300px;
+        width: 170px;
+    }
+
+    .services .list .service p {
+        width: 170px;
+    }
+
+    /* About */
+
+    .about-title h2 {
+        font-size: 25px;
+    }
+    
+    /* Reviews */
+    
+    .reviews p {
+        width: 400px;
+        font-size: 18px;
+    }
+    
+    /* Pricing */
+
+    .pricing p {
+        width: 400px;
+        font-size: 18px;
+    }
+
+    .pricing .pricing-holder {
+        width: 900px;
+    }
+
+    .pricing .pricing-holder .plan {
+        width: 300px;
+    }
+
+    .pricing .pricing-holder .plan .plan-price {
+        font-size: 35px;
+    }
+
+    /* Footer */
+
+    footer {
+        background-position-x: -200px;
+    }
+    
+    footer h3 {
+        font-size: 30px;
+        margin-top: 300px;
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1699px) {
+    /* Home */
+    
+    .home .home-holder .info h1 {
+        font-size: 45px;
+    }
+
+    .home .home-holder .info p {
+        font-size: 18px;
+        width: 40vw;
+    }
+
+    .home .home-holder img {
+        height: 400px;
+    }
+
+    /* Services */
+    
+    .services-title h2 {
+        font-size: 35px;
+    }
+
+    .services .main-p {
+        font-size: 18px;
+    }
+
+    /* Reviews */
+    
+    .reviews p {
+        width: 400px;
+        font-size: 18px;
+    }
+
+    /* Pricing */
+
+    .pricing p {
+        width: 400px;
+        font-size: 18px;
+    }
+
+    .pricing .pricing-holder {
+        width: 1050px;
+    }
+
+    .pricing .pricing-holder .plan {
+        width: 350px;
+    }
+
+    /* Footer */
+
+    footer h3 {
+        font-size: 30px;
+        margin-top: 300px;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    /* Home */
+
+    .home .home-holder .info h1 {
+        font-size: 60px;
+    }
+
+    .home .home-holder .info p {
+        font-size: 25px;
+    }
+
+    .home .home-holder .info .button-holder button {
+        font-size: 30px;
+    }
+
+    .home .home-holder img {
+        height: 600px;
+        width: auto;
+    }
+
+    /* Services */
+
+    .services-title h2 {
+        font-size: 45px;
+    }
+
+    .services .main-p {
+        font-size: 20px;
+    }
+
+    .services .list .service {
+        width: 250px;
+    }
+
+    .services .list .service strong {
+        font-size: 22px;
+    }
+
+    .services .list .service p {
+        font-size: 18px;
+    }
+
+    .services .list .service button {
+        font-size: 22px;
+    }
+
+    /* About */
+
+    .about-title h2 {
+        font-size: 38px;
+    }
+
+    .about .about-holder .about-info p {
+        font-size: 20px;
+    }
+
+    .about .about-holder .about-info .options .option {
+        width: 210px;
+    }
+
+    .about .about-holder .about-info button {
+        font-size: 25px;
+    }
+
+    .about .about-holder .about-info {
+        font-size: 15px;
+    }
+
+    /* Reviews */
+
+    .reviews-title h2 {
+        font-size: 40px;
+    }
+
+    .reviews p {
+        width: 450px;
+        font-size: 20px;
+    }
+
+    .reviews .reviews-holder .people .person {
+        width: 600px;
+        margin: 15px;
+    }
+
+    .reviews .reviews-holder .people-info .info-holder {
+        width: 500px;
+    }
+
+    .reviews .reviews-holder .people-info .info-holder span {
+        font-size: 110px;
+    }
+    
+    .reviews .reviews-holder .people-info .info-holder p {
+        font-size: 22px;
+    }
+
+    .reviews .reviews-holder .people-info .info-profile img {
+        height: 120px;
+        width: 120px;
+    }
+
+    .reviews .reviews-holder .people-info .info-profile .info-text strong {
+        font-size: 25px;
+    }
+
+    .reviews .reviews-holder .people-info .info-profile .info-text p {
+        font-size: 20px;
+    }
+
+    /* Pricing */
+
+    .pricing-title h2 {
+        font-size: 40px;
+    }
+
+    .pricing p {
+        width: 450px;
+        font-size: 20px;
+    }
+
+    .pricing .pricing-holder .plan {
+        height: 800px;
+    }
+
+    .pricing .pricing-holder .plan:first-child,
+    .pricing .pricing-holder .plan:last-child {
+        height: 750px;
+    }
+
+    .pricing .pricing-holder .plan .plan-info strong {
+        font-size: 25px;
+    }
+
+    .pricing .pricing-holder .plan .plan-info .plans p,
+    .pricing .pricing-holder .plan .plan-info .not-plans p {
+        font-size: 20px;
+    }
+
+    .pricing .pricing-holder .plan .plan-info button {
+        font-size: 20px;
+    }
+
+    /* Footer */
+
+    footer h3 {
+        margin-top: 250px;
+    }
+
+    footer form input {
+        font-size: 22px;
+    }
+
+    footer form button {
+        font-size: 20px;
+    }
+
+    footer .footer-holder .section h4 {
+        font-size: 25px;
+    }
+}

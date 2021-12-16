@@ -1,0 +1,937 @@
+@font-face {
+    font-family: defFont;
+    src: url("./fonts/ReadexPro-VariableFont_wght.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: defFont;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --defBlue: #3ba3ed;
+    --defPurple: #4346f7;
+    --defAqua: #5ecdf2;
+    --defGrey: #635b5a;
+    --defLightGrey: #b3afaf;
+}
+
+/* Loading */
+
+.loading {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading .circle {
+    height: 100px;
+    width: 100px;
+    background: transparent;
+    border-top: 5px solid var(--defBlue);
+    border-radius: 50%;
+    animation: rotateCircle 1s infinite;
+}
+
+@keyframes rotateCircle {
+    0% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(-360deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Header */
+
+header {
+    display: flex;
+    width: 100%;
+    padding: 20px 0;
+    position: absolute;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 90;
+}
+
+.menu {
+    opacity: 0;
+    height: 0;
+    top: -50px;
+    transition: 500ms;
+}
+
+#menu-animation {
+    opacity: 1;
+    height: auto;
+    -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.3); 
+    box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.3);
+    top: 0;
+}
+
+#selected-section {
+    color: var(--defBlue);
+    border-bottom: 1px solid var(--defBlue);
+}
+
+header .header-holder {
+    display: flex;
+    width: 70vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .header-holder #logo {
+    margin-left: 30px;
+}
+
+header .header-holder nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+header .header-holder nav a {
+    color: var(--defGrey);
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+    margin: 0 10px;
+    transition: 300ms;
+}
+
+header .header-holder nav a:hover {
+    color: var(--defBlue);
+}
+
+header .header-holder nav a:last-child {
+    color: white;
+    background: linear-gradient(90deg, var(--defPurple), var(--defBlue), var(--defAqua));
+    border: 1px solid white;
+    border-radius: 30px;
+    margin: 0 30px;
+    padding: 10px;
+    transition: 500ms;
+}
+
+header .header-holder nav a:last-child:hover {
+    color: var(--defBlue);
+    background: transparent;
+    border: 1px solid var(--defBlue);
+    border-radius: 0;
+}
+
+/* Responsive Header */
+
+header .header-holder button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+header .header-holder button img {
+    height: auto;
+    width: 50px;
+    opacity: 1;
+    filter: contrast(1000%) invert(100%) sepia(100%) saturate(10000%) hue-rotate(130deg);
+    transition: 300ms;
+}
+
+#responsive-button {
+    opacity: 0;
+}
+
+.responsive-menu {
+    display: flex;
+    height: 500px;
+    width: 450px;
+    opacity: 0;
+    background: white;
+    border: 3px dashed var(--defBlue);
+    margin-top: -250px;
+    margin-left: -225px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 95;
+    transition: 500ms;
+}
+
+#responsive-appear {
+    opacity: 1;
+    top: 50%;
+}
+
+.responsive-menu nav {
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.responsive-menu nav a {
+    color: var(--defGrey);
+    font-size: 30px;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: 500ms;
+}
+
+.responsive-menu nav a:hover {
+    color: var(--defBlue);
+    font-size: 35px;
+}
+
+.responsive-menu nav a:last-child {
+    color: white;
+    background: linear-gradient(90deg, var(--defPurple), var(--defBlue), var(--defAqua));
+    border: 1px solid white;
+    border-radius: 30px;
+    margin: 0 30px;
+    padding: 10px;
+    transition: 500ms;
+}
+
+.responsive-menu nav a:last-child:hover {
+    color: var(--defBlue);
+    background: transparent;
+    border: 1px solid var(--defBlue);
+    border-radius: 0;
+}
+
+/* Home */
+
+.home {
+    display: flex;
+    overflow-x: hidden;
+    height: 100vh;
+    background: url("./images/home-bckg-1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+}
+
+#home-animation {
+    opacity: 1;
+    left: 0;
+}
+
+.home-holder {
+    display: grid;
+    width: 70vw;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr auto;
+}
+
+.home .home-holder .info {
+    display: flex;
+    height: 300px;
+    width: 600px;
+    opacity: 0;
+    position: relative;
+    left: -100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: 1s;
+}
+
+.home .home-holder .info h1 {
+    color: var(--defGrey);
+    font-size: 50px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.home .home-holder .info p {
+    color: var(--defGrey);
+    font-size: 20px;
+    text-align: center;
+}
+
+.home .home-holder .info .button-holder {
+    display: flex;
+    margin: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .home-holder .info .button-holder button {
+    color: white;
+    font-size: 25px;
+    text-transform: capitalize;
+    background: linear-gradient(90deg, var(--defPurple), var(--defBlue), var(--defAqua));
+    -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.5); 
+    box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.5);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 0 10px;
+    padding: 10px 20px;
+    transition: 500ms;
+}
+
+
+.home .home-holder .info .button-holder button:hover {
+    color: var(--defBlue);
+    background: white;
+    -webkit-box-shadow: 0px 0px 15px 7px rgba(0,0,0,0.7); 
+    box-shadow: 0px 0px 15px 7px rgba(0,0,0,0.7);
+}
+
+.home .home-holder img {
+    height: 450px;
+    width: auto;
+    opacity: 0;
+    position: relative;
+    left: 100px;
+    transition: 500ms;
+}
+
+/* Services */
+
+.services {
+    display: flex;
+    background: url("./images/services-bckg.png");
+    background-size: contain;
+    background-position-x: 200px;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-title h2 {
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+.services-title img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#services-animation {
+    opacity: 1;
+    top: 0;
+}
+
+.special-title {
+    opacity: 0;
+    position: relative;
+    top: -50px;
+    transition: 500ms;
+}
+
+.services .main-p {
+    width: 40vw;
+    color: var(--defLightGrey);
+    font-size: 15px;
+    text-align: center;
+    opacity: 0;
+    position: relative;
+    top: -50px;
+    margin: 20px;
+    transition: 500ms;
+}
+
+.services .list {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.services .list #absolute-img {
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.services .list .service {
+    width: 200px;
+    background: white;
+    background-position-x: 0;
+    border-radius: 15px;
+    border-top-right-radius: 60px;
+    -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.3); 
+    box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.3);
+    margin: 20px;
+    padding: 20px;
+    transition: 500ms;
+    z-index: 50;
+}
+
+.services .list .service:hover {
+    background: url("./images/service-bckg.jpg");
+    background-size: cover;
+    background-position-x: -120px;
+    -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.5); 
+    box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.5);
+}
+
+.services .list .service img {
+    margin-bottom: 25px;
+    transition: 500ms;
+}
+
+.services .list .service:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.services .list .service strong {
+    display: block;
+    color: black;
+    font-size: 18px;
+    text-transform: capitalize;
+    margin: 0 auto;
+    transition: 500ms;
+}
+
+.services .list .service p {
+    width: 200px;
+    color: var(--defLightGrey);
+    font-size: 15px;
+    text-align: left;
+    margin: 20px 0;
+    transition: 500ms;
+}
+
+.services .list .service button {
+    color: var(--defBlue);
+    font-size: 18px;
+    text-transform: capitalize;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.services .list .service button span {
+    color: var(--defAqua);
+    position: relative;
+    left: 0;
+    transition: 300ms;
+}
+
+.services .list .service button:hover span {
+   left: 10px;
+}
+
+.services .list .service:hover strong,
+.services .list .service:hover p,
+.services .list .service:hover button,
+.services .list .service:hover button span {
+    color: white;
+}
+
+/* About */
+
+.about {
+    display: flex;
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-title h2 {
+    font-size: 28px;
+}
+
+.about .about-holder {
+    display: grid;
+    width: 80vw;
+    margin-top: 100px;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.about .about-holder .about-info p {
+    color: var(--defLightGrey);
+    font-size: 15px;
+    margin: 20px 0;
+}
+
+.about .about-holder .about-info .options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .about-holder .about-info .options .option {
+    width: 180px;
+    border-radius: 30px;
+    -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.3); 
+    box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.3);
+    margin: 10px;
+    padding: 15px 10px;
+}
+
+.about .about-holder .about-info .options .option strong {
+    color: black;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.about .about-holder .about-info .options .option p {
+    color: var(--defLightGrey);
+    font-size: 15px;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.about .about-holder .about-info button {
+    display: block;
+    color: white;
+    font-size: 20px;
+    text-transform: capitalize;
+    background: linear-gradient(90deg, var(--defPurple), var(--defBlue), var(--defAqua));
+    border: 1px solid white;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 15px;
+    padding: 10px 15px;
+    transition: 300ms;
+}
+
+.about .about-holder .about-info button:hover {
+    color: var(--defBlue);
+    background: transparent;
+    border: 1px solid var(--defBlue);
+}
+
+.about .about-holder .about-info {
+    color: var(--defGrey);
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+/* Reviews */
+
+.reviews {
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviews-title h2 {
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+.reviews-title img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.reviews p {
+    width: 350px;
+    color: var(--defLightGrey);
+    font-size: 15px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.reviews .reviews-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviews .reviews-holder .people .person {
+    display: flex;
+    width: 500px;
+    cursor: pointer;
+    margin: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reviews .reviews-holder .people .person .person-title {
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviews .reviews-holder .people .person .person-title strong {
+    color: black;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.reviews .reviews-holder .people .person .person-title p {
+    color: var(--defLightGrey);
+    font-size: 15px;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.reviews .reviews-holder .people .person p {
+    color: var(--defGrey);
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.reviews .reviews-holder .people .person .person-rate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviews .reviews-holder .people .person .person-rate p {
+    width: 50px;
+}
+
+.reviews .reviews-holder .people-info {
+    display: flex;
+    opacity: 1;
+    position: relative;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 500ms;
+}
+
+#animation {
+    opacity: 0;
+    left: 50px;
+}
+
+.reviews .reviews-holder .people-info .info-holder {
+    min-height: 200px;
+    width: 450px;
+    background: url("./images/reviews-bckg.png");
+    background-size: cover;
+    border-radius: 30px;
+    margin: 15px;
+    padding: 15px;
+}
+
+.reviews .reviews-holder .people-info .info-holder span {
+    color: var(--defPurple);
+    font-size: 100px;
+    line-height: 0;
+}
+
+.reviews .reviews-holder .people-info .info-holder p {
+    display: block;
+    color: white;
+    font-size: 18px;
+    font-style: italic;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.reviews .reviews-holder .people-info .info-profile {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviews .reviews-holder .people-info .info-profile img {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    border-radius: 50px;
+}
+
+.reviews .reviews-holder .people-info .info-profile .info-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.reviews .reviews-holder .people-info .info-profile .info-text strong {
+    color: black;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.reviews .reviews-holder .people-info .info-profile .info-text p {
+    color: var(--defGrey);
+    font-size: 18px;
+    text-transform: capitalize;
+    text-align: left;
+    margin: 0;
+}
+
+/* Pricing */
+
+.pricing {
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricing-title h2 {
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+.pricing-title img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.pricing p {
+    width: 350px;
+    color: var(--defLightGrey);
+    font-size: 15px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.pricing .pricing-holder {
+    display: flex;
+    width: 80vw;
+    margin: 30px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pricing .pricing-holder .plan {
+    display: flex;
+    height: 750px;
+    background: url("./images/pricing-top.png"), url("./images/pricing-bottom.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+    background-position-x: -75px, 25px;
+    border-radius: 30px;
+    -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.1); 
+    box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.1);
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pricing .pricing-holder .plan:first-child,
+.pricing .pricing-holder .plan:last-child {
+    height: 650px;
+    background: url("./images//pricing-top-filter.png"), url("./images/pricing-bottom-filter.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+    background-position-x: -110px, 35px;
+}
+
+.pricing .pricing-holder .plan .plan-price {
+    color: white;
+    font-size: 40px;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+
+.pricing .pricing-holder .plan .plan-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricing .pricing-holder .plan .plan-info strong {
+    color: black;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.pricing .pricing-holder .plan .plan-info img {
+    margin: 20px;
+}
+
+.pricing .pricing-holder .plan .plan-info .plans p {
+    color: var(--defBlue);
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.pricing .pricing-holder .plan .plan-info .not-plans p {
+    color: var(--defLightGrey);
+    font-size: 15px;
+    text-transform: capitalize;
+    text-decoration: line-through;
+}
+
+.pricing .pricing-holder .plan .plan-info button {
+    color: var(--defBlue);
+    font-size: 15px;
+    text-transform: capitalize;
+    background: transparent;
+    border: 1px solid var(--defBlue);
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 15px;
+    padding: 10px 15px;
+    transition: 300ms;
+}
+
+.pricing .pricing-holder .plan .plan-info button:hover {
+    color: white;
+    background: var(--defBlue);
+    border: 1px solid white;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    overflow-x: hidden;
+    background: url("./images/footer-bckg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer h3 {
+    width: 500px;
+    margin-top: 200px;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+footer form {
+    margin: 30px 0;
+}
+
+footer form input {
+    color: white;
+    font-size: 18px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    margin: 0 10px;
+    padding: 5px 10px;
+}
+
+footer form input::placeholder {
+    color: white;
+    text-transform: capitalize;
+}
+
+footer form button {
+    color: white;
+    font-size: 15px;
+    text-transform: capitalize;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: 300ms;
+}
+
+footer form button:hover {
+    color: var(--defBlue);
+    background: white;
+    border: 1px solid var(--defBlue);
+}
+
+footer strong {
+    color: white;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+footer strong span {
+    font-size: 18px;
+    text-transform: lowercase;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+footer .footer-holder {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .footer-holder .section {
+    display: flex;
+    height: 250px;
+    width: 300px;
+    margin: 15px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .footer-holder .section h4 {
+    color: white;
+    font-size: 20px;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+footer .footer-holder .section img {
+    filter: brightness(0) invert(1);
+    margin: 15px 0;
+}
+
+footer .footer-holder .section p {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 10px 0;
+}
+
+footer .footer-holder .section a {
+    color: white;
+    font-size: 15px;
+    text-transform: capitalize;
+    text-decoration: none;
+    margin: 10px 0;
+}

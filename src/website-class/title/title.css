@@ -1,0 +1,12 @@
+.title h2 {
+    color: var(--defGrey);
+    text-transform: capitalize;
+}
+
+.title h2 span {
+    color: var(--defBlue);
+}
+
+.title .underline {
+    margin-top: 20px;
+}

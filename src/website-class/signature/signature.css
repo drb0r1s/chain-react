@@ -1,0 +1,25 @@
+.signature {
+    display: flex;
+    margin: 20px 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.signature strong {
+    color: white;
+    font-size: 20px;
+    text-transform: none;
+}
+
+.signature a img {
+    height: auto;
+    width: 150px;
+    filter: invert(1);
+}
+
+.signature p {
+    color: white;
+    font-size: 15px;
+    text-transform: none;
+}
