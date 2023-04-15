@@ -7,7 +7,8 @@
 **drb0r1s**
 
 *Github:* **drb0r1s**
-*Discord:* **boris**#1171
+*Discord:* **drb0r1s**#9999
+*Email:* **contact@drb0r1s.xyz**
 
 ### Chain Review
 
